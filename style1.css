@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(245, 246, 227);
+}
+.myVideo {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+}
+.nav_bar {
+  padding: 10px 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+}
+.login__btn {
+  padding: 5px 15px;
+  font-size: 20px;
+  color: black;
+  font-weight: bold;
+  border-radius: 15px;
+  background-color: rgba(88, 88, 88, 0.7);
+  margin-right: 15px;
+  text-transform: uppercase;
+}
+.register__btn {
+  padding: 5px 15px;
+  font-size: 20px;
+  color: black;
+  font-weight: bold;
+  border-radius: 15px;
+  background-color: rgba(88, 88, 88, 0.7);
+  text-transform: uppercase;
+}
+
+.login__btn:hover {
+  padding: 5px 15px;
+  font-size: 20px;
+  background-color: rgba(45, 45, 45, 0.2);
+}
+.register__btn:hover {
+  padding: 5px 15px;
+  font-size: 20px;
+  background-color: rgba(45, 45, 45, 0.2);
+}
+.main__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 95vh;
+}
+.btn {
+  padding: 40px;
+  font-size: 60px;
+  background-color: rgb(95, 93, 95);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px black;
+  text-transform: uppercase;
+}
+.btn:hover {
+  background-color: rgb(60, 57, 60);
+  transform: scale(1.1);
+}
+.btn__container {
+  width: 1000px;
+  display: flex;
+  justify-content: space-around;
+}
+
+/*learning page*/
+.btn__container_learningh {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 65px;
+  margin-top: 120px;
+  justify-items: center;
+  align-items: center;
+}
