@@ -86,3 +86,69 @@ body {
   justify-items: center;
   align-items: center;
 }
+/* number */
+.mynumber{
+  width:100%;
+  height: 100vh;
+  background-image: url("./pictures/number.gif");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+
+}
+/* color */
+.mycolor{
+  width:100%;
+  height: 100vh;
+  background-image: url("./pictures/color.gif");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+
+}
+/* alphabet */
+.myalphabet{
+  width:100%;
+  height: 100vh;
+  background-image: url("./pictures/alphabet.gif");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+
+}
+/*identification */
+.myidentify{
+  width:100%;
+  height: 100vh;
+  background-image: url("./pictures/identify.gif");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+
+}
+/* game */
+.mygame{
+  width:100%;
+  height: 100vh;
+  background-image: url("./pictures/game.gif");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+
+}
+/*identification */
+.mypuzzle{
+  width:100%;
+  height: 100vh;
+  background-image: url("./pictures/puzzle.gif");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+
+}
