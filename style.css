@@ -335,3 +335,11 @@ h1{
         border: none;
 
        }
+
+       #logo{
+        max-height: 10px;
+        width: 50px;
+        text-align: center;
+        position: absolute;
+        bottom: 30px;
+       }
