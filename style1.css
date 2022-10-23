@@ -18,12 +18,26 @@ body {
   height: 122vh;
   width: 122vw;
 }
-.nav_bar {
-  padding: 10px 90px;
+.red img{
+  width: 95px;
+  float:left;
+  padding-left:2%;
+  padding-top: 1%;
+  filter: invert(1);
+}
+.nav_bar{
+  padding: 5px 1px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 50px;
+}
+.nav_bar img{
+  width: 95px;
+  float:left;
+  padding-left:2%;
+  padding-top: 3%;
+  filter: invert(1);
 }
 .login__btn {
   padding: 5px 15px;
@@ -66,7 +80,7 @@ body {
   font-size: 45px;
   background-color: rgb(130, 27, 142);
   color: white;
-  border: none;
+  border:0cm;
   border-radius: 10px;
   box-shadow: 0px 5px 10px black;
   text-transform: uppercase;
@@ -123,7 +137,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 88vh;
+    height: 100vh;
   }
   
   table, td, th{

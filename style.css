@@ -33,23 +33,18 @@
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
     border:2px  #000729;
   }
-.red{margin-left: 10%;
-height: 100px;}
+.red img{
+    width: 95px;
+    float: left;
+    padding-left:2%;
+    padding-top: 1%;
+    filter: invert(0);
+}
 .yellow{margin-left: 89%;
 height: 100px;}
 .logo{
     width: 100px;
     cursor: pointer;
-}
-.navbar{
-    width: 85%;
-    height: 15%;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-   
 }
 button{
     color: #fbfcfd;
