@@ -5,102 +5,93 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style1.css" />
+    <link rel="stylesheet" href="number-learn-style.css">
     <title>Child website Design</title>
 </head>
+
 
 <body>
     <div class="mynumber">
         <div class="red">
             <img src="./pictures/logo.jpg" alt="Logo">
         </div>
-        <div class="learn-container">
-            <table>
-
-                <tr>
-
-                    <th>Numbers</th>
-                    <th>Spelling</th>
-                    <th>Image</th>
-
-                </tr>
-
-                <tr>
-
-                    <td>1</td>
-                    <td>ONE</td>
-                    <td>Image</td>
-
-                </tr>
-
-                <tr>
-
-                    <td>2</td>
-                    <td>TWO</td>
-                    <td>Image</td>
-
-                </tr>
-                <tr>
-
-                    <td>3</td>
-                    <td>THREE</td>
-                    <td>Image</td>
-
-                </tr>
-
-                <tr>
-
-                    <td>4</td>
-                    <td>FOUR</td>
-                    <td>Image</td>
-
-                </tr>
-                <tr>
-
-                    <td>5</td>
-                    <td>FIVE</td>
-                    <td>Image</td>
-
-                </tr>
-
-                <tr>
-
-                    <td>6</td>
-                    <td>SIX</td>
-                    <td>Image</td>
-
-                </tr>
-                <tr>
-
-                    <td>7</td>
-                    <td>SEVEN</td>
-                    <td>Image</td>
-
-                </tr>
-                <tr>
-
-                    <td>8</td>
-                    <td>EIGHT</td>
-                    <td>Image</td>
-
-                </tr>
-                <tr>
-
-                    <td>9</td>
-                    <td>NINE</td>
-                    <td>Image</td>
-
-                </tr>
-                <tr>
-
-                    <td>10</td>
-                    <td>TEN</td>
-                    <td>Image</td>
-
-                </tr>
-
-            </table>
+        <div class="slider-container">
+            <div class="slider">
+                <div class="image-container">
+                    <div class="numbertext">1 / 10</div>
+                    <img src="./pictures/number-learn/one.jpg" alt="Image">
+                </div>
+            </div>
+            <div class="slider">
+                <div class="image-container">
+                    <div class="numbertext">2 / 10</div>
+                    <img src="./pictures/number-learn/two.jpg" alt="Image">
+                </div>
+            </div>
+            <div class="slider">
+                <div class="image-container">
+                    <div class="numbertext">3 / 10</div>
+                    <img src="./pictures/number-learn/three.jpg" alt="Image">
+                </div>
+            </div>
+            <div class="slider">
+                <div class="image-container">
+                    <div class="numbertext">4 / 10</div>
+                    <img src="./pictures/number-learn/four.jpg" alt="Image">
+                </div>
+            </div>
+            <div class="slider">
+                <div class="image-container">
+                    <div class="numbertext">5 / 10</div>
+                    <img src="./pictures/number-learn/five.jpg" alt="Image">
+                </div>
+            </div>
+            <div class="slider">
+                <div class="image-container">
+                    <div class="numbertext">6 / 10</div>
+                    <img src="./pictures/number-learn/six.jpg" alt="Image">
+                </div>
+            </div>
+            <div class="slider">
+                <div class="image-container">
+                    <div class="numbertext">7 / 10</div>
+                    <img src="./pictures/number-learn/seven.jpg" alt="Image">
+                </div>
+            </div>
+            <div class="slider">
+                <div class="image-container">
+                    <div class="numbertext">8 / 10</div>
+                    <img src="./pictures/number-learn/eight.jpg" alt="Image">
+                </div>
+            </div>
+            <div class="slider">
+                <div class="image-container">
+                    <div class="numbertext">9 / 10</div>
+                    <img src="./pictures/number-learn/nine.jpg" alt="Image">
+                </div>
+            </div>
+            <div class="slider">
+                <div class="image-container">
+                    <div class="numbertext">10 / 10</div>
+                    <img src="./pictures/number-learn/ten.jpg" alt="Image">
+                </div>
+            </div>
+            <div class="prev-button" onclick="plusSlides(-1)">&#10094;</div>
+            <div class="next-button" onclick="plusSlides(1)">&#10095;</div>
         </div>
+        <div class="dots">
+            <div class="dot" onclick="currentSlide(1)"></div>
+            <div class="dot" onclick="currentSlide(2)"></div>
+            <div class="dot" onclick="currentSlide(3)"></div>
+            <div class="dot" onclick="currentSlide(4)"></div>
+            <div class="dot" onclick="currentSlide(5)"></div>
+            <div class="dot" onclick="currentSlide(6)"></div>
+            <div class="dot" onclick="currentSlide(7)"></div>
+            <div class="dot" onclick="currentSlide(8)"></div>
+            <div class="dot" onclick="currentSlide(9)"></div>
+            <div class="dot" onclick="currentSlide(10)"></div>
+        </div>
+        <script src="number-learn.js"></script>
     </div>
 </body>
 
