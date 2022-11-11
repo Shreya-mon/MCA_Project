@@ -12,7 +12,7 @@ const quiz = [
     },
     {
         q:'2+2=?',
-        options:['a.4','b.3','c.1','8'],
+        options:['a.4','b.3','c.1','d.8'],
         answers:1
     },
     {
