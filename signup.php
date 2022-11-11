@@ -98,7 +98,7 @@ if(isset($_POST['submit'])){
 								 '".$_REQUEST['password']."','')";
 	$result=mysqli_query($link, $sql);
     if ($result){
-        header("Location: http://localhost/MCA_Project/home.html");
+        header("Location: http:\MCA_Project\home.html");
        
 
    }
