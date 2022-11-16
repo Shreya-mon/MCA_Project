@@ -15,6 +15,24 @@
 
 
 }
+h1 {
+    text-align: center;
+    text-shadow: 2px 2px #190606;
+    font-size: 2em;
+    margin-top: 0.67em;
+    margin-left:50%;
+    margin-right: 50%;
+    font-weight: bold;
+    color: rgb(248, 248, 250);
+    font-size: 50px;
+    background-color: rgb(130, 27, 142);
+    display:block;
+    font-family: "sans-serif";
+    padding: 2px 0px;
+    border-radius: 0px;
+    box-shadow: 0px 10px 10px black;
+  
+  }
 .button {
     background-color: #4CAF50; /* Green */
     border: none;

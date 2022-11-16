@@ -9,6 +9,25 @@
 body {
   background-color: rgb(245, 246, 227);
 }
+h1 {
+  text-align: center;
+  text-shadow: 2px 2px #190606;
+  display: block;
+  font-size: 2em;
+  margin-top: 0.67em;
+  margin-left: 24%;
+  margin-right: 0;
+  font-weight: bold;
+  color: rgb(248, 248, 250);
+  font-size: 50px;
+  background-color: rgb(130, 27, 142);
+  display:inline-flex;
+  font-family: "sans-serif";
+  padding: 2px 0px;
+  border-radius: 15px;
+  box-shadow: 0px 10px 10px black;
+
+}
 .myVideo {
   display: block;
   position: absolute;
