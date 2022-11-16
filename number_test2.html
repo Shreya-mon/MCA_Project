@@ -3,17 +3,27 @@
 
 <head lang="en">
     <meta charset="UTF-8">
+    <link rel="icon" href="./pictures/logo.jpg" type="image/x-icon" />
     <title>Child website Design</title>
     <style>
+        * {
+
+            margin: 0;
+            padding: 0;
+            font-family: arial;
+            box-sizing: border-box;
+        }
+
+        html,
         body {
-            background-color: #eeeeee;
+            height: 100%;
         }
 
         .grid {
             width: 68%;
             height: 520px;
             margin: 0 auto;
-            background-color: #fff;
+            background-color: rgb(191, 254, 234);
             padding: 10px 50px 50px 50px;
             border-radius: 50px;
             border: 2px solid #cbcbcb;
@@ -25,10 +35,10 @@
         }
 
         .red img {
-            width: 95px;
+            width: 65px;
             float: left;
-            padding-left: 2%;
-            padding-top: 1%;
+            padding-left: 0%;
+            padding-top: 0%;
             filter: invert(1);
         }
 
@@ -62,14 +72,15 @@
         }
 
         #score {
+            margin-top: 5%;
             color: #43166d;
             text-align: center;
-            font-size: 30px;
+            font-size: 50px;
         }
 
         .grid #question {
             font-family: "monospace";
-            font-size: 30px;
+            font-size: 50px;
             color: #441388;
         }
 
@@ -95,7 +106,7 @@
         #btn2:hover,
         #btn3:hover {
             cursor: pointer;
-            background-color: #ffc107;
+            background-color: #120f05;
         }
 
         #btn0:focus,
@@ -130,40 +141,70 @@
             color: #fff;
             background: #007bff;
         } */
-        .button button.restart{
+        .button button.restart {
+            margin-left: 10%;
+            margin-top: 100px;
             padding: 20px;
             font-size: 25px;
+            cursor: pointer;
             background-color: rgb(11, 102, 247);
             color: white;
-            border:0cm;
+            border: 0cm;
             border-radius: 5px;
             box-shadow: 0px 5px 10px black;
             text-transform: uppercase;
-          }
-          .button button.quit{
-            position:relative;
+        }
+
+        .button button.quit {
+            margin-right: 17%;
+            margin-top: 100px;
+            position: relative;
             padding: 20px;
             font-size: 25px;
+            cursor: pointer;
             background-color: rgb(11, 102, 247);
             color: white;
-            border:0cm;
+            border: 0cm;
             border-radius: 10px;
             box-shadow: 0px 5px 10px black;
             text-transform: uppercase;
-          }
-          .button button.restart:hover {
+        }
+
+        .button button.restart:hover {
             background-color: rgb(17, 194, 35);
             transform: scale(1.1);
-          }
-          .button button.quit:hover {
+        }
+
+        .button button.quit:hover {
             background-color: rgb(236, 12, 12);
             transform: scale(1.1);
-          }
-          .button {
+        }
+
+        .button {
             width: 1000px;
             display: flex;
             justify-content: space-around;
-          }
+        }
+
+        /* footer {
+            height: 40px;
+            padding: 0 13px;
+            font-size: 18px;
+            font-weight: 400;
+            cursor: pointer;
+            border: none;
+            outline: none;
+            color: #fff;
+            border-radius: 5px;
+            background: #007bff;
+            border: 1px solid #007bff;
+            line-height: 10px;
+            opacity: 0;
+            pointer-events: none;
+            transform: scale(0.95);
+            transition: all 0.3s ease;
+        } /*
+
         /* Result Footer 
         footer{
             height: 60px;
@@ -209,7 +250,7 @@
 <body>
     <div class="mynumber">
         <div class="red">
-            <img src="./pictures/logo.jpg" alt="Logo">
+            <button onclick="func3();"><img src="./pictures/logo.jpg" alt="Logo"></button>
         </div>
         <div class="grid">
             <div id="quiz">
@@ -270,12 +311,8 @@
                 populate();
             }
         };
-        //Quit
-        //const result_box = document.querySelector(".result_box");
-        //const quit_quiz = score.querySelector(".buttons .quit");
-        //quit_quiz.onclick = () => {
-            //window.location.reload(); //reload the current window
-        //} 
+
+
 
 
         function showProgress() {
@@ -287,12 +324,30 @@
         function showScores() {
             var gameOverHTML = "<h1>Result</h1>";
             gameOverHTML += "<div id='score'> Your scores: " + quiz.score + "</div>";
-            gameOverHTML += "<footer><div class='button'><button class='restart'>Replay Quiz</button><button class='quit'>Quit Quiz</button></div></footer>";
+            gameOverHTML += "<footer><div class='button'><button class='restart' onclick= 'func1();'>Replay Quiz</button><button class='quit' onclick= 'func2();'>Quit Quiz</button></div></footer>";
 
             var element = document.getElementById("quiz");
             element.innerHTML = gameOverHTML;
 
         };
+        function func2() {
+            window.history.back();
+        };
+        function func1() {
+            window.location.reload();
+        };
+        /* click logo to previous page */
+        function func3() {
+            window.history.back();
+        };
+
+        //Quiz
+        //const result_box = document.querySelector(".button");
+        //var quit_quiz = document.querySelector(".footer .button .quit");
+        //quit_quiz.addEventListener('click', () => {
+        // window.location.reload(); //reload the current window
+        //});
+
 
         // create questions
         var questions = [
@@ -343,6 +398,8 @@
         // display quiz
         populate();
     </script>
+
+
 </body>
 
 </html>
