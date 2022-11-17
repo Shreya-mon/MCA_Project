@@ -216,3 +216,15 @@ h1 {
   overflow: hidden;
 
 }
+ /* Audion Button  */
+.audio_button {
+  padding: 20px;
+  font-size: 25px;
+  background-color: rgb(11, 102, 247);
+  color: white;
+  border: 0cm;
+  border-radius: 5px;
+  box-shadow: 0px 5px 10px black;
+  text-transform: uppercase;
+  margin-left: 10%;
+}
