@@ -104,6 +104,7 @@ h1 {
   box-shadow: 0px 5px 10px black;
   text-transform: uppercase;
 }
+
 .btn:hover {
   background-color: rgb(60, 57, 60);
   transform: scale(1.1);

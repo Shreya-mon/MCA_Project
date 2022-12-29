@@ -21,14 +21,28 @@
 
   <div class="main__content__learing">
     <div class="btn__container_learningh">
-      <a href="alphabet.html"><button class="btn">Alphabets</button></a>
-      <a href="number.html"><button class="btn">Numbers</button></a>
-      <a href="color.html"><button class="btn">Colors</button></a>
-      <a href="identify.html"><button class="btn">Identification</button></a>
-      <a href="puzzle.html"><button class="btn">Puzzles</button></a>
-      <a href="game.html"><button class="btn">Games</button></a>
+      <a href="alphabet.html"><button class="btn" id="b1" onclick="number()">Alphabets</button></a>
+      <a href="number.html"><button disabled  class="btn" id="b2" onclick="color()">Numbers</button></a>
+      <a href="color.html" ><button disabled class="btn" id="b3" onclick="indentify()" >Colors</button></a>
+      <a href="identify.html"><button disabled class="btn" id="b4" onclick="puzzle()">Identification</button></a>
+      <a href="puzzle.html"><button disabled class="btn" id="b5">Puzzles</button></a>
+      
     </div>
   </div>
+  <script>
+   function number(){
+      document.getElementById("b2").disabled=false;
+   }
+   function color(){
+      document.getElementById("b3").disabled=false;
+   }
+   function indentify(){
+      document.getElementById("b4").disabled=false;
+   }
+   function puzzle(){
+      document.getElementById("b5").disabled=false;
+   }
+ </script>
 </body>
 
 </html>

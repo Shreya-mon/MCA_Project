@@ -19,12 +19,30 @@
 
         <div class="number__content">
             <div class="number__container">
-                <a href="number-learn.html"><button class="btn">Learn</button></a>
-                <a href="number-video.html"><button class="btn">Video</button></a>
-                <a href="number_test2.html"><button class="btn">Test</button></a>
+                <a href="number-learn.html"><button class="btn" id="learn" type="button" onclick="clickEvent1()">Learn</button></a>
+                <a href="number-video.html"><button class="btn" id="video" type="button" onclick="clickEvent()">Video</button></a>
+                <button class="btn" id="test" type="button" onclick="checkState()">Test</button>
             </div>
         </div>
     </div>
+    <script>
+        const test1=document.getElementById('test');
+        window.addEventListener("load", function() {
+            test1.disabled=true;
+        });
+        function checkState(){
+            if(test1.disabled === false){
+                //alert("Not Disabled");
+                window.location.href ="./number_test2.html";
+            }           
+        }
+        function clickEvent(){
+            test1.disabled=false;
+            }
+        function clickEvent1(){
+            test1.disabled=false;
+        }
+    </script>
 </body>
 
 </html>
