@@ -1,24 +1,61 @@
-<!DOCTYPE htmlregister__btn>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" href="./pictures/logo.jpg" type="image/x-icon" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Assesment</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="assStyle.css" />
+    <title>Add</title>
   </head>
-  <body
-    style="
-      background-image: linear-gradient(rgb(175, 153, 65), rgb(242, 242, 188));
-    "
-  >
-    <nav class="nav_bar">
-      <img src="" alt="Logo image" class="logo" />
-      <div class="nav__btn">
-        <button class="login__btn">Login</button>
-        <button class="register__btn">Register</button>
+  <body>
+    <audio id="myAudio">
+      <source src="wrong.mp3" type="audio/mpeg" />
+    </audio>
+
+    <header>
+      <div class="container">
+        <div class="nav">
+          <h2>
+            <span><i class="fa fa-trophy" aria-hidden="true"></i></span> Quick
+            Test
+          </h2>
+          <nav>
+            <ul>
+              <li class="current"><a href="index.html">Add</a></li>
+              <li><a href="subtract.html">Subtract</a></li>
+              <li><a href="multiply.html">Multiply</a></li>
+              <li><a href="divide.html">Divide</a></li>
+              <li><a href="identification.html">Identification</a></li>
+            </ul>
+          </nav>
+        </div>
       </div>
-    </nav>
+    </header>
+
+    <div class="wrapper">
+      <div class="equation">
+        <h1 id="num1" style="color: #fe4a49"></h1>
+        <h1 style="color: #2ab7ca">+</h1>
+        <h1 id="num2" style="color: #fed766">1</h1>
+        <h1 style="color: #f86624">=</h1>
+        <h1 style="color: gray">?</h1>
+      </div>
+      <div class="answer-options">
+        <div class="options" style="background-color: #fe4a49">
+          <h1 id="option1">1</h1>
+        </div>
+        <div class="options" style="background-color: #2ab7ca">
+          <h1 id="option2">2</h1>
+        </div>
+        <div class="options" style="background-color: #fed766">
+          <h1 id="option3">3</h1>
+        </div>
+      </div>
+    </div>
+
+    <script src="add.js"></script>
   </body>
-</html>
+</html
