@@ -1,61 +1,129 @@
 const option1 = document.getElementById("option1"),
-      option2 = document.getElementById("option2"),
-      option3 = document.getElementById("option3"),
-      audio = document.getElementById("myAudio");  
-var answer = 0;
+  option2 = document.getElementById("option2"),
+  option3 = document.getElementById("option3"),
+  audio = document.getElementById("myAudio");
 
-function generate_equation(){ 
-  var num1 = Math.floor(Math.random() * 13),
-      num2 = Math.floor(Math.random() * 13),
-      dummyAnswer1 = Math.floor(Math.random() * 50),
-      dummyAnswer2 = Math.floor(Math.random() * 50),
-      allAnswers = [],
-      switchAnswers = [];
+const btn = document.querySelector(".btn");
 
-  answer = eval(num1 * num2);
-  
-  document.getElementById("num1").innerHTML = num1; 
-  document.getElementById("num2").innerHTML = num2; 
+const quiz = [
+  {
+    q: "Which month comes right before june",
+    options: ["may", "july", "august"],
+    answer: 0,
+  },
+  {
+    q: "What color is a banana",
+    options: ["red", "blue", "yellow"],
+    answer: 2,
+  },
+  {
+    q: "How many days in a week",
+    options: ["5", "8", "7"],
+    answer: 2,
+  },
+  {
+    q: "How many colures are present in rainbow",
+    options: ["7", "5", "9"],
+    answer: 0,
+  },
+  {
+    q: "How many months in a year ",
+    options: ["10", "12", "9"],
+    answer: 1,
+  },
+  {
+    q: "Choose the correct spelling",
+    options: ["thre", "trhee", "three"],
+    answer: 2,
+  },
+  {
+    q: "Which number comes right before 80",
+    options: ["79", "81", "88"],
+    answer: 0,
+  },
+  {
+    q: "What is the national fruit of India",
+    options: ["mango", "apple", "banana"],
+    answer: 0,
+  },
+  {
+    q: "What color is a apple",
+    options: ["red", "blue", "yellow"],
+    answer: 0,
+  },
+  {
+    q: "How many weeks in a year",
+    options: ["79", "52", "50"],
+    answer: 1,
+  },
 
-  allAnswers = [answer, dummyAnswer1, dummyAnswer2];
+];
 
-  for (i = allAnswers.length; i--;){
-    switchAnswers.push(allAnswers.splice(Math.floor(Math.random() * (i + 1)), 1)[0]);
-  };
+let questionCounter = 0;
+let currentQuestion;
+let answer = "";
 
-  option1.innerHTML = switchAnswers[0];
-  option2.innerHTML = switchAnswers[1];
-  option3.innerHTML = switchAnswers[2]; 
-
+const getNewQuestion = (index) => {
+  const questionIndex = quiz[index];
+  console.log(questionIndex);
+  currentQuestion = questionIndex;
+  answer = currentQuestion.options[currentQuestion.answer];
+  console.log(answer);
+  document.getElementById("num1").innerHTML = currentQuestion.q ?? "";
+  option1.innerHTML = currentQuestion.options[0];
+  option2.innerHTML = currentQuestion.options[1];
+  option3.innerHTML = currentQuestion.options[2];
 };
 
-option1.addEventListener("click", function(){
-    if(option1.innerHTML == answer){
-      generate_equation();
-    }
-    else{
-      audio.play();
-    }
+function addscore() {
+  var score = parseInt(document.getElementById("current_score").textContent);
+  score += 5;
+  document.getElementById("current_score").textContent = score;
+}
+
+function subtractscore() {
+  var score = parseInt(document.getElementById("current_score").textContent);
+  score -= 1;
+  document.getElementById("current_score").textContent = score;
+}
+
+option1.addEventListener("click", function () {
+  if (option1.innerHTML == answer) {
+    addscore();
+    questionCounter = (questionCounter + 1) % quiz.length;
+    getNewQuestion(questionCounter);
+  } else {
+    audio.play();
+    subtractscore();
+  }
 });
 
-option2.addEventListener("click", function(){
-    if(option2.innerHTML == answer){
-      generate_equation();
-    }
-    else{
-      audio.play();
-    }
+option2.addEventListener("click", function () {
+  if (option2.innerHTML == answer) {
+    addscore();
+    questionCounter = (questionCounter + 1) % quiz.length;
+    getNewQuestion(questionCounter);
+  } else {
+    audio.play();
+    subtractscore();
+  }
 });
 
-option3.addEventListener("click", function(){
-    if(option3.innerHTML == answer){
-     generate_equation();
-    }
-    else{
-      audio.play();
-    }
+option3.addEventListener("click", function () {
+  if (option3.innerHTML == answer) {
+    addscore();
+    questionCounter = (questionCounter + 1) % quiz.length;
+    getNewQuestion(questionCounter);
+  } else {
+    audio.play();
+    subtractscore();
+  }
 });
 
-generate_equation()
+btn.addEventListener("click", function () {
+  document.getElementById("current_score").textContent = 0;
+  questionIndex = 0;
+  getNewQuestion(questionIndex);
+});
 
-
+getNewQuestion(questionCounter);

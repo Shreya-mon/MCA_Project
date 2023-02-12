@@ -11,7 +11,7 @@ body {
 }
 
 header {
-  background: #FE4A49;
+  background: #1c8f05;
 }
 
 .container {
@@ -21,7 +21,7 @@ header {
 
 .nav {
   overflow: hidden;
-  background: #FE4A49;
+  background: #1c8f05;
   color: #fff;
   padding: 20px 0;
 }
@@ -96,6 +96,7 @@ nav a {
   -moz-border-radius: 57;
   border-radius: 57px;
   font-family: Courier New;
+  font-weight: bold;
   color: #ffffff;
   font-size: 42px;
   padding: 10px 20px 10px 20px;
