@@ -28,22 +28,24 @@
                     <img id="actualImage" />
                     <div>Re-arrange to create a picture like this.</div>
                     <p id="levelPanel">
-                        <input type="radio" name="level" id="easy" checked="checked" value="3" onchange="imagePuzzle.startGame(images, this.value);"
-                        /> <label for="easy">Easy</label>
-                        <input type="radio" name="level" id="medium" value="4" onchange="imagePuzzle.startGame(images, this.value);" />                        <label for="medium">Medium</label>
-                        <input type="radio" name="level" id="hard" value="5" onchange="imagePuzzle.startGame(images, this.value);" />                        <label for="hard">Hard</label>
+                        <input type="radio" name="level" id="easy" checked="checked" value="3"
+                            onchange="imagePuzzle.startGame(images, this.value);" /> <label for="easy">Easy</label>
+                        <input type="radio" name="level" id="medium" value="4"
+                            onchange="imagePuzzle.startGame(images, this.value);" /> <label for="medium">Medium</label>
+                        <input type="radio" name="level" id="hard" value="5"
+                            onchange="imagePuzzle.startGame(images, this.value);" /> <label for="hard">Hard</label>
                     </p>
                     <div>
                         <button id="btnRule" type="button" class="btn" onclick="rules();">Rules</button>
                         <button id="newPhoto" type="button" class="btn" onclick="restart();">Another Photo</button>
-                       
+
                     </div>
                 </div>
             </div>
         </div>
         <div id="gameOver" style="display:none;">
             <div style="background-color: #fc9e9e; padding: 5px 10px 20px 10px; text-align: center; ">
-                <h2 style="text-align:center; >Game Over!!</h2>
+                <h2 style="text-align:center;">Game Over!!</h2>
                 Congratulations!! <br /> You have completed this picture.
                 <br /> Steps: <span id="stepCount" class="stepCount">0</span> steps.
                 <br /> Time Taken: <span class="timeCount">0</span> seconds<br />
@@ -58,7 +60,7 @@
                 { src: 'pictures/puzzle/cat.jpg', title: 'CAT' },
                 { src: 'pictures/puzzle/ball.jfif', title: 'BALL' },
                 { src: 'pictures/puzzle/house.png', title: 'HOUSE' }
-                
+
             ];
 
             window.onload = function () {
@@ -78,4 +80,5 @@
         </script>
     </div>
 </body>
+
 </html>
