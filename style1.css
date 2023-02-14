@@ -114,6 +114,8 @@ h1 {
   border-radius: 10px;
   box-shadow: 0px 5px 10px black;
   text-transform: uppercase;
+  cursor: pointer;
+  ;
 }
 
 .btn:hover {
@@ -212,7 +214,7 @@ h1 {
   background-image: url("./pictures/identify.gif");
   background-size: cover;
   background-position: center;
-  position: relative;
+  position: absolute;
   overflow: hidden;
   z-index: -1;
 
