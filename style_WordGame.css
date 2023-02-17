@@ -88,6 +88,7 @@ body{
 }
 .buttons .refresh-word{
   background: #6C757D;
+  cursor: pointer;
 }
 .buttons .refresh-word:hover{
   background: #5f666d;
