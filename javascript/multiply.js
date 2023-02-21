@@ -5,6 +5,7 @@ const option1 = document.getElementById("option1"),
 var answer = 0;
 
 const btn = document.querySelector('.btn');
+const try_again = document.querySelector('.try_again')
 
 function generate_equation() {
   var num1 = Math.floor(Math.random() * 13),
@@ -35,13 +36,17 @@ function addscore() {
   var score = parseInt(document.getElementById('current_score').textContent);
   score += 5;
   document.getElementById('current_score').textContent = score;
+  try_again.classList.add('hidden');
 }
 
 function subtractscore() {
   var score = parseInt(document.getElementById('current_score').textContent);
   score -= 1;
   document.getElementById('current_score').textContent = score;
+  try_again.classList.remove('hidden');
 }
+
+
 option1.addEventListener("click", function () {
   if (option1.innerHTML == answer) {
     addscore();

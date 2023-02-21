@@ -4,6 +4,7 @@ const option1 = document.getElementById("option1"),
   audio = document.getElementById("myAudio");
 
 const btn = document.querySelector(".btn");
+const try_again = document.querySelector('.try_again')
 
 const quiz = [
   {
@@ -79,12 +80,14 @@ function addscore() {
   var score = parseInt(document.getElementById("current_score").textContent);
   score += 5;
   document.getElementById("current_score").textContent = score;
+  try_again.classList.add('hidden');
 }
 
 function subtractscore() {
   var score = parseInt(document.getElementById("current_score").textContent);
   score -= 1;
   document.getElementById("current_score").textContent = score;
+  try_again.classList.remove('hidden');
 }
 
 option1.addEventListener("click", function () {
