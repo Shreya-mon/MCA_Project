@@ -68,3 +68,13 @@
     width: auto;
     padding: 3px 8px;
 }
+.btn1{
+    color: rgb(99, 8, 93);
+    background-color: rgb(100, 208, 208);
+    font-size: 139px;
+    padding: 30px;
+
+}
+#btn{
+    margin-left: 58%;
+}
