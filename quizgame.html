@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="quizgame.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Answer the following question by clicking on the appropriate image.</h2>
+    <div id="riquestionbox" class="riitem clearfix">
+        <span id="riquestiontext"> </span>
+    </div>
+    <table class="table riactivity" style="width: 80%">
+        <tr>
+            <td class="td1">
+                <img id="riimage001" name="banana" src="/images/img-1.png" />
+            </td>
+            <td class="td2">
+                <img id="riimage002" name="grapes" src="/images/img-2.png" />
+            </td>
+            <td class="td3">
+                <img id="riimage003" name="watermelon" src="/images/img-3.png" />
+            </td>
+        </tr>
+    </table>
+    <div id="riquestionresponse" class="rihide"></div>
+    <button id="rinextquestion" class="rihide pull-right clearfix">
+        Next Question
+    </button>
+    <button id="rireset" class="pull-right rihide clearfix">Re-start</button>
+    <script src="./javascript/quizgame.js"></script>
+</body>
+
+</html>
