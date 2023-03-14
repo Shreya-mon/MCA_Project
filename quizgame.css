@@ -4,7 +4,7 @@
 
 .riactivity img {
     cursor: pointer;
-    width: 100%
+    width: 80%
 }
 
 .ricorrect {
@@ -34,7 +34,7 @@
 .riitem {
     position: relative;
     padding: 1.75rem 1.25rem;
-    margin: 1rem;
+    margin: -0.5rem;
     border: 1px solid transparent;
     border-radius: .25rem;
     color: #111;
