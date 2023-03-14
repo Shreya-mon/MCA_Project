@@ -2,11 +2,11 @@
 // note: arrays are zero based. That means array [0] is the first one
 var currentquestion = 0;
 var questions = [{
-    "question": "which is banana?",
+    "question": "which one is banana?",
     "response": "banana",
     "answerimage": 'riimage001'
 }, {
-    "question": "Which is watermelon?",
+    "question": "Which one is watermelon?",
     "response": "watermelon",
     "answerimage": 'riimage003'
 }, {
