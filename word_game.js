@@ -1,94 +1,23 @@
 let words = [
     {
-        word: "addition",
-        hint: "The process of adding numbers"
+        word: "apple",
+        Image: "https://cdn.pixabay.com/animation/2023/02/11/17/56/17-56-09-296_512.gif"
     },
     {
-        word: "meeting",
-        hint: "Event in which people come together"
+        word: "flower",
+        Image: "https://cdn.pixabay.com/animation/2022/11/03/01/12/01-12-50-100_512.gif"
     },
     {
-        word: "number",
-        hint: "Math symbol used for counting"
+        word: "cat",
+        Image: "https://cdn.pixabay.com/animation/2022/07/30/22/01/22-01-29-66_512.gif"
     },
     {
-        word: "exchange",
-        hint: "The act of trading"
+        word: "food",
+        Image: "https://cdn.pixabay.com/animation/2023/03/08/02/08/02-08-24-833_512.gif"
     },
     {
-        word: "canvas",
-        hint: "Piece of fabric for oil painting"
-    },
-    {
-        word: "garden",
-        hint: "Space for planting flower and plant"
-    },
-    {
-        word: "position",
-        hint: "Location of someone or something"
-    },
-    {
-        word: "feather",
-        hint: "Hair like outer covering of bird"
-    },
-    {
-        word: "comfort",
-        hint: "A pleasant feeling of relaxation"
-    },
-    {
-        word: "tongue",
-        hint: "The muscular organ of mouth"
-    },
-    {
-        word: "expansion",
-        hint: "The process of increase or grow"
-    },
-    {
-        word: "country",
-        hint: "A politically identified region"
-    },
-    {
-        word: "group",
-        hint: "A number of objects or persons"
-    },
-    {
-        word: "taste",
-        hint: "Ability of tongue to detect flavour"
-    },
-    {
-        word: "store",
-        hint: "Large shop where goods are traded"
-    },
-    {
-        word: "field",
-        hint: "Area of land for farming activities"
-    },
-    {
-        word: "friend",
-        hint: "Person other than a family member"
-    },
-    {
-        word: "pocket",
-        hint: "A bag for carrying small items"
-    },
-    {
-        word: "needle",
-        hint: "A thin and sharp metal pin"
-    },
-    {
-        word: "expert",
-        hint: "Person with extensive knowledge"
-    },
-    {
-        word: "statement",
-        hint: "A declaration of something"
-    },
-    {
-        word: "second",
-        hint: "One-sixtieth of a minute"
-    },
-    {
-        word: "library",
-        hint: "Place containing collection of books"
-    },
+        word: "dog",
+        Image: "https://cdn.pixabay.com/animation/2023/03/03/14/42/14-42-00-939_512.gif"
+    }
+    
 ]

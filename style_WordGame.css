@@ -127,3 +127,11 @@ body{
     width: calc(100% / 2 - 7px);
   }
 }
+#image{
+  height:50%;
+  width:40%;
+  padding: 64px;
+  border-color: #2c52ed;
+  
+
+}

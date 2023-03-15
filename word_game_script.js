@@ -20,7 +20,7 @@ const initTimer = maxTime => {
 }
 
 const initGame = () => {
-    initTimer(30);
+    initTimer(100);
     let randomObj = words[Math.floor(Math.random() * words.length)];
     let wordArray = randomObj.word.split("");
     for (let i = wordArray.length - 1; i > 0; i--) {
@@ -28,7 +28,11 @@ const initGame = () => {
         [wordArray[i], wordArray[j]] = [wordArray[j], wordArray[i]];
     }
     wordText.innerText = wordArray.join("");
-    hintText.innerText = randomObj.hint;
+    
+    
+    const myImg = document.querySelector("img")
+    myImg.src = randomObj.Image;
+     
     correctWord = randomObj.word.toLowerCase();;
     inputField.value = "";
     inputField.setAttribute("maxlength", correctWord.length);
