@@ -119,9 +119,12 @@ h1 {
   padding: 40px;
   font-size: 45px;
   background-color: rgb(130, 27, 142);
-  color: white;
-  border: 0cm;
-  border-radius: 10px;
+  background-image: url("./pictures/test1.gif");
+  color: rgb(117, 2, 130);
+  text-shadow:2px 2px #fffefe;
+  border: 10cm;
+  border-color: #0a0a0a;
+  border-radius: 50px;
   box-shadow: 0px 5px 10px black;
   text-transform: uppercase;
   cursor: pointer;
