@@ -83,4 +83,32 @@ btn.addEventListener('click', function () {
 })
 generate_equation()
 
+/* // Open the IndexedDB database
+const dbRequest = window.indexedDB.open('myDatabase', 1);
+
+// Define the object store schema
+dbRequest.onupgradeneeded = event => {
+  const db = event.target.result;
+  const objectStore = db.createObjectStore('scores', { keyPath: 'id', autoIncrement: true });
+  objectStore.createIndex('score', 'score', { unique: false });
+};
+
+// Retrieve the scores from the web page and add them to the database
+dbRequest.onsuccess = event => {
+  const db = event.target.result;
+  const transaction = db.transaction(['scores'], 'readwrite');
+  const objectStore = transaction.objectStore('scores');
+
+  // Retrieve the scores from the web page and add them to the database
+  const scores = document.querySelectorAll('.score');
+  scores.forEach(score => {
+    const value = parseInt(score.innerText);
+    objectStore.add({ score: value });
+  });
+
+  transaction.oncomplete = () => {
+    console.log('Scores added to database.');
+  };
+};
+*/
 

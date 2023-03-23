@@ -13,6 +13,11 @@ var questions = [{
     "question": "Which is grape?",
     "response": "grape.",
     "answerimage": 'riimage002'
+},
+{
+    "question": "Which is apple?",
+    "response": "apple.",
+    "answerimage": 'riimage004'
 }];
 
 (function () {
@@ -32,6 +37,9 @@ var questions = [{
 
     document.getElementById("riimage003").addEventListener('click', function (event) {
         fnCheck("riimage003", this);
+    });
+    document.getElementById("riimage004").addEventListener('click', function (event) {
+        fnCheck("riimage004", this);
     });
     document.getElementById("rireset").addEventListener('click', function (event) {
         fnReset();
