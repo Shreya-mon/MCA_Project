@@ -34,6 +34,14 @@ body {
   opacity: 0.5;
 }
 
+.droppable-elements {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  row-gap: 40px;
+  margin-top: 100px;
+  justify-items: center;
+  align-items: center;
+}
 .droppable {
   height: 6.5rem;
   width: 6.5rem;
@@ -96,4 +104,33 @@ body {
   .draggable-elements {
     margin: 1.5rem;
   }
+}
+.btn1 {
+  padding: 20px;
+  font-size: 30px;
+  background-color: rgb(38, 254, 4);
+  color: rgb(0, 0, 0);
+  text-shadow:2px 2px #fffefe;
+  border: 10cm;
+  border-color: #0a0a0a;
+  border-radius: 50px;
+  box-shadow: 0px 5px 10px black;
+  text-transform: uppercase;
+  cursor: pointer;
+  ;
+}
+
+.btn1:hover {
+  background-color: rgb(1, 127, 62);
+  transform: scale(1.1);
+}
+.btn__container_learningh {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 40px;
+  margin-top: 160px;
+  margin-bottom: 150px;
+  justify-items: center;
+  align-items: center;
+
 }
