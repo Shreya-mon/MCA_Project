@@ -53,6 +53,7 @@ const questionGenerator = () => {
       //If the user guessed correct answer
       if (userInput == answerValue) {
         stopGame(`Yippie!! <span>Correct</span> Answer`);
+        
       }
       //If user inputs operator other than +,-,*
       else if (operatorQuestion && !operators.includes(userInput)) {

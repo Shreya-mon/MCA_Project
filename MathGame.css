@@ -6,9 +6,10 @@
   }
   body {
     background-color: #f4c531;
+    background-image: url("./pictures/math.gif");
   }
   .container {
-    background-color: #ffffff;
+    background-color: #e1ff00;
     width: 90%;
     max-width: 31.25em;
     position: absolute;
@@ -20,7 +21,7 @@
   }
   .container h3 {
     font-size: 1.2em;
-    color: #23234c;
+    color: #140c0c;
     text-align: center;
     font-weight: 500;
     line-height: 1.8em;
@@ -30,7 +31,7 @@
     font-weight: 500;
     display: block;
     margin: 0 auto;
-    background-color: #f4c531;
+    background-color: #00ca1e;
     border-radius: 0.3em;
     border: none;
     outline: none;
@@ -61,7 +62,7 @@
     font-size: 1em;
     font-weight: 600;
     width: 2.35em;
-    color: #23234c;
+    color: #00005c;
     text-align: center;
     padding: 0 0.2em;
     border: none;
@@ -107,7 +108,7 @@
   #result {
     margin-bottom: 1em;
     font-size: 1.5em;
-    color: #23234c;
+    color: #ffffff;
   }
   #result span {
     font-weight: 600;
