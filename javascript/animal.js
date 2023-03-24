@@ -2,51 +2,41 @@
 // note: arrays are zero based. That means array [0] is the first one
 var currentquestion = 0;
 var questions = [{
-    "question": "which one is banana?",
-    "response": "banana",
+    "question": "which one is Deer?",
+    "response": "Deer",
     "answerimage": 'riimage001'
 }, {
-    "question": "Which one is watermelon?",
-    "response": "watermelon",
+    "question": "Which one is Wolf?",
+    "response": "Wolf",
     "answerimage": 'riimage003'
 }, {
-    "question": "Which is grape?",
-    "response": "grapes",
+    "question": "Which is Giraffe?",
+    "response": "Giraffe",
     "answerimage": 'riimage002'
 },
 {
-    "question": "Which is mango?",
-    "response": "mango",
+    "question": "Which is Lion?",
+    "response": "Lion",
     "answerimage": 'riimage008'
 },
 {
-    "question": "Which is pineapple?",
-    "response": "pineapple",
+    "question": "Which is Tiger?",
+    "response": "Tiger",
     "answerimage": 'riimage005'
 },
 {
-    "question": "Which is blueberry?",
-    "response": "blueberry",
+    "question": "Which is Cat?",
+    "response": "Cat",
     "answerimage": 'riimage006'
 },
 {
-    "question": "Which is apple?",
-    "response": "apple",
+    "question": "Which is Horse?",
+    "response": "Horse",
     "answerimage": 'riimage004'
 },
 {
-    "question": "Which is orange?",
-    "response": "orange",
-    "answerimage": 'riimage0010'
-},
-{
-    "question": "Which is strawberry?",
-    "response": "strawberry",
-    "answerimage": 'riimage009'
-},
-{
-    "question": "Which one is peach?",
-    "response": "peach",
+    "question": "Which one is Dog?",
+    "response": "Dog",
     "answerimage": 'riimage007'
 }];
 
@@ -82,12 +72,6 @@ var questions = [{
     });
     document.getElementById("riimage008").addEventListener('click', function (event) {
         fnCheck("riimage008", this);
-    });
-    document.getElementById("riimage009").addEventListener('click', function (event) {
-        fnCheck("riimage009", this);
-    });
-    document.getElementById("riimage0010").addEventListener('click', function (event) {
-        fnCheck("riimage0010", this);
     });
     document.getElementById("rireset").addEventListener('click', function (event) {
         fnReset();

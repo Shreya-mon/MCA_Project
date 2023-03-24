@@ -12,12 +12,12 @@
 
 .ricorrect {
     position: relative;
-    padding: 1.25rem 2.00rem;
-    margin: 1rem;
+    padding: 1.00rem 1.70rem;
+    margin: .50rem;
     border: 1px solid transparent;
     border-radius: .25rem;
     color: #155724;
-    font-size: 69px;
+    font-size: 60px;
     background-color: #d4edda;
     border-color: #c3e6cb;
     width: 100%

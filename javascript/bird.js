@@ -2,51 +2,51 @@
 // note: arrays are zero based. That means array [0] is the first one
 var currentquestion = 0;
 var questions = [{
-    "question": "which one is banana?",
-    "response": "banana",
+    "question": "which one is Parrot?",
+    "response": "Parrot",
     "answerimage": 'riimage001'
 }, {
-    "question": "Which one is watermelon?",
-    "response": "watermelon",
+    "question": "Which one is Falcon?",
+    "response": "Falcon",
     "answerimage": 'riimage003'
 }, {
-    "question": "Which is grape?",
-    "response": "grapes",
+    "question": "Which is Hen?",
+    "response": "Hen",
     "answerimage": 'riimage002'
 },
 {
-    "question": "Which is mango?",
-    "response": "mango",
+    "question": "Which is Duck?",
+    "response": "Duck",
     "answerimage": 'riimage008'
 },
 {
-    "question": "Which is pineapple?",
-    "response": "pineapple",
+    "question": "Which is Owl?",
+    "response": "Owl",
     "answerimage": 'riimage005'
 },
 {
-    "question": "Which is blueberry?",
-    "response": "blueberry",
+    "question": "Which is Penguin?",
+    "response": "Penguin",
     "answerimage": 'riimage006'
 },
 {
-    "question": "Which is apple?",
-    "response": "apple",
-    "answerimage": 'riimage004'
-},
-{
-    "question": "Which is orange?",
-    "response": "orange",
+    "question": "Which is Hummingbird?",
+    "response": "Hummingbird",
     "answerimage": 'riimage0010'
 },
 {
-    "question": "Which is strawberry?",
-    "response": "strawberry",
+    "question": "Which is Peacock?",
+    "response": "Peacock",
     "answerimage": 'riimage009'
 },
 {
-    "question": "Which one is peach?",
-    "response": "peach",
+    "question": "Which is Kingfisher?",
+    "response": "Kingfisher",
+    "answerimage": 'riimage004'
+},
+{
+    "question": "Which one is Ostriches?",
+    "response": "Ostriches",
     "answerimage": 'riimage007'
 }];
 
