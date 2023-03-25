@@ -57,6 +57,7 @@ const questionGenerator = () => {
         stopGame(`Yippie!! <span>Correct</span> Answer`);
         
         img.style.display="block";
+        img.play();
         
       }
       //If user inputs operator other than +,-,*
@@ -69,6 +70,7 @@ const questionGenerator = () => {
         stopGame(`Opps!! <span>Wrong</span> Answer`);
         
         img1.style.display="block";
+        img1.play();
       }
 
     }
