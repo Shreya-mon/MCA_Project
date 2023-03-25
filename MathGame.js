@@ -5,6 +5,8 @@ const controls = document.querySelector(".controls-container");
 const result = document.getElementById("result");
 const submitBtn = document.getElementById("submit-btn");
 const errorMessage = document.getElementById("error-msg");
+const img1 = document.getElementById("my-img1");
+const img = document.getElementById("my-img");
 let answerValue;
 let operatorQuestion;
 
@@ -54,6 +56,8 @@ const questionGenerator = () => {
       if (userInput == answerValue) {
         stopGame(`Yippie!! <span>Correct</span> Answer`);
         
+        img.style.display="block";
+        
       }
       //If user inputs operator other than +,-,*
       else if (operatorQuestion && !operators.includes(userInput)) {
@@ -63,7 +67,10 @@ const questionGenerator = () => {
       //If user guessed wrong answer
       else {
         stopGame(`Opps!! <span>Wrong</span> Answer`);
+        
+        img1.style.display="block";
       }
+
     }
     //If user input is empty
     else {
@@ -91,4 +98,8 @@ const stopGame = (resultText) => {
   startBtn.innerText = "Restart";
   controls.classList.remove("hide");
   startBtn.classList.remove("hide");
+  startBtn.addEventListener("click",()=>{
+    img.style.display="none";
+    img1.style.display="none";
+  })
 };
