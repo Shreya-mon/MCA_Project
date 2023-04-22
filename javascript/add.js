@@ -30,16 +30,14 @@ function generate_equation() {
   option2.innerHTML = switchAnswers[1];
   option3.innerHTML = switchAnswers[2];
 };
-
+var score = 0;
 function addscore() {
-  var score = parseInt(document.getElementById('current_score').textContent);
   score += 5;
   document.getElementById('current_score').textContent = score;
   try_again.classList.add('hidden');
 }
 
 function subtractscore() {
-  var score = parseInt(document.getElementById('current_score').textContent);
   score -= 1;
   document.getElementById('current_score').textContent = score;
   try_again.classList.remove('hidden');
