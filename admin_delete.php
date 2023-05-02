@@ -226,27 +226,22 @@
                     <span class="h1 fw-bold mb-0">LEARNERA</span>
                   </div>
 
-                  <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Sign into your account</h5>
+                  <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">For Admin Use Only</h5>
 
                   <div class="form-outline mb-4">
                     <input type="email" name="email" id="form2Example17" class="form-control form-control-lg" />
                     <label class="form-label" for="form2Example17">Email address</label>
                   </div>
 
-                  <div class="form-outline mb-4">
-                    <input type="password"  name="password" id="form2Example27" class="form-control form-control-lg" />
-                    <label class="form-label" for="form2Example27">Password</label>
-                  </div>
+                  
 
                   <div class="pt-1 mb-4">
-                    <input type="submit" name="submit" value="LOG In" class="btn btn-dark btn-lg btn-block">
+                    <input type="submit" name="submit" value="Delete" class="btn btn-dark btn-lg btn-block">
                   </div>
 
-                  <a class="small text-muted" href="#!">Forgot password?</a>
-                  <p class="mb-5 pb-lg-2" style="color: #393f81;">Don't have an account? <a href="signup.php"
-                      style="color: #393f81;">Register here</a></p>
-                  <a href="#!" class="small text-muted">Terms of use.</a>
-                  <a href="#!" class="small text-muted">Privacy policy</a>
+                  <a class="small text-muted" href="admin_panel.php">Return</a>
+                  
+                  
                 </form>
 
               </div>
@@ -264,48 +259,26 @@
 </body>
 
 </html>
-
 <?php
 include("connection.php");
 if(isset($_POST['submit'])){
-session_start();
-$_SESSION['rememail'] = $_REQUEST['email'];
-$_SESSION['rempass'] = $_REQUEST['password'];
-$qry = "SELECT * FROM `user_details` WHERE `email` = '".$_REQUEST['email']."'";
-if($result=mysqli_query($link, $qry))
-{
-	$rowc = mysqli_num_rows($result);
-	if($rowc == 1)
-	{
-		$qry1 = "SELECT * FROM `user_details` WHERE `email` = '".$_REQUEST['email']."' AND `password` = '".$_REQUEST['password']."'";
-		if($result=mysqli_query($link, $qry1))
-		{
-			$rowc1 = mysqli_num_rows($result);
-			if($rowc1 == 0)
-			{   
-				$_SESSION['errorPass'] = "Incorrect Password!";
-        
-				header('Location:logIn.php');
-                
-			}
-			else
-			{
-				$row = mysqli_fetch_assoc($result);
-				$_SESSION['name'] = $row['name'];
-				$_SESSION['email'] = $row['email'];
-        echo "<script>window.location.href='home.html';</script>";
-				 header('Location:home.html');
-			}
-		}
-	}
-	else
-	{
-		$_SESSION['errorEmail'] = "Email Id Mismatched!";
-		header('Location:logIn.php');
-        
-	}
+  $qry = mysqli_query($link, "SELECT * FROM `user_details` WHERE `email` = '".$_REQUEST['email']."'");
+  $row = mysqli_fetch_array($qry);
+  $rowc = mysqli_num_rows($qry);
+
+if($rowc == 1){
+$qry = mysqli_query($link, "DELETE FROM `user_details` WHERE `email` = '".$_REQUEST['email']."'");
+	
+
+if ($qry) {
+    echo "successfully Deleted";
+    
+} else {
+    echo "Failed";
+}
+}
+else{
+  echo "Record not found !";
 }
 }
 ?>
-
-

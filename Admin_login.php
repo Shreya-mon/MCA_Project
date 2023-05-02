@@ -226,7 +226,7 @@
                     <span class="h1 fw-bold mb-0">LEARNERA</span>
                   </div>
 
-                  <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Sign into your account</h5>
+                  <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">For Admin Use Only</h5>
 
                   <div class="form-outline mb-4">
                     <input type="email" name="email" id="form2Example17" class="form-control form-control-lg" />
@@ -243,10 +243,8 @@
                   </div>
 
                   <a class="small text-muted" href="#!">Forgot password?</a>
-                  <p class="mb-5 pb-lg-2" style="color: #393f81;">Don't have an account? <a href="signup.php"
-                      style="color: #393f81;">Register here</a></p>
-                  <a href="#!" class="small text-muted">Terms of use.</a>
-                  <a href="#!" class="small text-muted">Privacy policy</a>
+                  
+                  
                 </form>
 
               </div>
@@ -271,13 +269,13 @@ if(isset($_POST['submit'])){
 session_start();
 $_SESSION['rememail'] = $_REQUEST['email'];
 $_SESSION['rempass'] = $_REQUEST['password'];
-$qry = "SELECT * FROM `user_details` WHERE `email` = '".$_REQUEST['email']."'";
+$qry = "SELECT * FROM `admin_details` WHERE `email` = '".$_REQUEST['email']."'";
 if($result=mysqli_query($link, $qry))
 {
 	$rowc = mysqli_num_rows($result);
 	if($rowc == 1)
 	{
-		$qry1 = "SELECT * FROM `user_details` WHERE `email` = '".$_REQUEST['email']."' AND `password` = '".$_REQUEST['password']."'";
+		$qry1 = "SELECT * FROM `admin_details` WHERE `email` = '".$_REQUEST['email']."' AND `password` = '".$_REQUEST['password']."'";
 		if($result=mysqli_query($link, $qry1))
 		{
 			$rowc1 = mysqli_num_rows($result);
@@ -285,7 +283,7 @@ if($result=mysqli_query($link, $qry))
 			{   
 				$_SESSION['errorPass'] = "Incorrect Password!";
         
-				header('Location:logIn.php');
+				header('Location:Admin_login.php');
                 
 			}
 			else
@@ -293,15 +291,15 @@ if($result=mysqli_query($link, $qry))
 				$row = mysqli_fetch_assoc($result);
 				$_SESSION['name'] = $row['name'];
 				$_SESSION['email'] = $row['email'];
-        echo "<script>window.location.href='home.html';</script>";
-				 header('Location:home.html');
+        echo "<script>window.location.href='Admin_panel.php';</script>";
+				 header('Location:Admin_panel.php');
 			}
 		}
 	}
 	else
 	{
 		$_SESSION['errorEmail'] = "Email Id Mismatched!";
-		header('Location:logIn.php');
+		header('Location:Admin_login.php');
         
 	}
 }

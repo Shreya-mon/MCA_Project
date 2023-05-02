@@ -4,6 +4,9 @@ const option1 = document.getElementById("option1"),
   audio = document.getElementById("myAudio");
 var answer = 0;
 
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 const btn = document.querySelector('.btn');
 const try_again = document.querySelector('.try_again')
 
@@ -110,3 +113,24 @@ dbRequest.onsuccess = event => {
 };
 */
 
+
+
+
+
+
+
+$(document).ready(function() {
+  var number1 = Math.round(Math.random() * 6) + 1;
+  var number2 = Math.round(Math.random() * 6) + 1;
+  var randomAnswer = number1 + number2;
+  $.ajax({
+     url: "read_add.php",
+     method: "POST",
+     dataType: "json",
+     data: {randomAnswer: randomAnswer},
+     success: function (result) {
+        alert("result: " + result);
+        $("#random").html(result);
+     }
+   });
+  });

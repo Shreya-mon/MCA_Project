@@ -219,18 +219,18 @@
             <div class="col-md-6 col-lg-7 d-flex align-items-center">
               <div class="card-body p-4 p-lg-5 text-black">
 
-                <form action="#" method="POST">
+                <form action="#" method="POST" id="form">
 
                   <div class="d-flex align-items-center mb-3 pb-1">
                     <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;"></i>
                     <span class="h1 fw-bold mb-0">LEARNERA</span>
                   </div>
 
-                  <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Sign into your account</h5>
+                  <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">For Admin Use Only</h5>
 
                   <div class="form-outline mb-4">
                     <input type="email" name="email" id="form2Example17" class="form-control form-control-lg" />
-                    <label class="form-label" for="form2Example17">Email address</label>
+                    <label class="form-label" for="form2Example17">Email</label>
                   </div>
 
                   <div class="form-outline mb-4">
@@ -238,15 +238,26 @@
                     <label class="form-label" for="form2Example27">Password</label>
                   </div>
 
-                  <div class="pt-1 mb-4">
-                    <input type="submit" name="submit" value="LOG In" class="btn btn-dark btn-lg btn-block">
+                  <div class="form-outline mb-4">
+                    <input type="text"  name="name" id="form2Example27" class="form-control form-control-lg" />
+                    <label class="form-label" for="form2Example27">Name</label>
                   </div>
 
-                  <a class="small text-muted" href="#!">Forgot password?</a>
-                  <p class="mb-5 pb-lg-2" style="color: #393f81;">Don't have an account? <a href="signup.php"
-                      style="color: #393f81;">Register here</a></p>
-                  <a href="#!" class="small text-muted">Terms of use.</a>
-                  <a href="#!" class="small text-muted">Privacy policy</a>
+                  <div class="form-outline mb-4">
+                    <input type="text"  name="grade" id="form2Example27" class="form-control form-control-lg" />
+                    <label class="form-label" for="form2Example27">Grade</label>
+                  </div>
+
+
+                  <div class="pt-1 mb-4">
+                    <input type="submit" name="submit" value="Update" class="btn btn-dark btn-lg btn-block" onclick="ShowAndHide()">
+                  </div>
+
+                  
+
+                  <a class="small text-muted" href="Admin_panel.php">Return</a>
+                  
+                  
                 </form>
 
               </div>
@@ -258,6 +269,14 @@
   </div>
 </section>
 
+  <SCRIPT>
+function ShowAndHide() {
+    var x = document.getElementById('form');
+    if(x.style.display=="block"){
+    x.style.display = "none";
+    }
+}
+</SCRIPT>
 
 
 
@@ -265,47 +284,31 @@
 
 </html>
 
+
 <?php
 include("connection.php");
+
 if(isset($_POST['submit'])){
-session_start();
-$_SESSION['rememail'] = $_REQUEST['email'];
-$_SESSION['rempass'] = $_REQUEST['password'];
-$qry = "SELECT * FROM `user_details` WHERE `email` = '".$_REQUEST['email']."'";
-if($result=mysqli_query($link, $qry))
-{
-	$rowc = mysqli_num_rows($result);
-	if($rowc == 1)
-	{
-		$qry1 = "SELECT * FROM `user_details` WHERE `email` = '".$_REQUEST['email']."' AND `password` = '".$_REQUEST['password']."'";
-		if($result=mysqli_query($link, $qry1))
-		{
-			$rowc1 = mysqli_num_rows($result);
-			if($rowc1 == 0)
-			{   
-				$_SESSION['errorPass'] = "Incorrect Password!";
-        
-				header('Location:logIn.php');
-                
-			}
-			else
-			{
-				$row = mysqli_fetch_assoc($result);
-				$_SESSION['name'] = $row['name'];
-				$_SESSION['email'] = $row['email'];
-        echo "<script>window.location.href='home.html';</script>";
-				 header('Location:home.html');
-			}
-		}
-	}
-	else
-	{
-		$_SESSION['errorEmail'] = "Email Id Mismatched!";
-		header('Location:logIn.php');
-        
-	}
+  $qry = mysqli_query($link, "SELECT * FROM `user_details` WHERE `email` = '".$_REQUEST['email']."'");
+  $row = mysqli_fetch_array($qry);
+  $rowc = mysqli_num_rows($qry);
+
+if($rowc == 1){
+$qry = mysqli_query($link, "UPDATE `user_details` SET `name`='".$_REQUEST['name']."' WHERE `email`='".$_REQUEST['email']."'");
+$qry = mysqli_query($link, "UPDATE `user_details` SET `password`='".$_REQUEST['password']."' WHERE `email`='".$_REQUEST['email']."'");
+$qry = mysqli_query($link, "UPDATE `user_details` SET `grade`='".$_REQUEST['grade']."' WHERE `email`='".$_REQUEST['email']."'");
+
+if($qry){
+  echo "<h1>Updated!<h1>";
+  
+}
+else{
+  echo "Failed!";
+}
+}
+
+else{
+  echo "Record Not Found !";
 }
 }
 ?>
-
-
