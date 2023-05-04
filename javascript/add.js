@@ -5,6 +5,7 @@ const option1 = document.getElementById("option1"),
 var answer = 0;
 
 const btn = document.querySelector('.btn');
+
 const try_again = document.querySelector('.try_again')
 
 function generate_equation() {
@@ -37,12 +38,13 @@ function addscore() {
   document.getElementById('current_score').textContent = score;
   try_again.classList.add('hidden');
 }
-console.log(score);
 function subtractscore() {
   score -= 1;
   document.getElementById('current_score').textContent = score;
   try_again.classList.remove('hidden');
 }
+
+// popup function 
 
 submit.addEventListener("click", function () {
   var popUpVal = document.getElementById('popup');
